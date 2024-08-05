@@ -43,6 +43,7 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
             return DateOnly.FromDateTime(DateTime.Now).Month - Birthdate.Month;
         }
 
+        //Metodos para retornar y cambiar el valor de una variable protected
         public int AnimalId()
         {
             return Id;

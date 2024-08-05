@@ -36,14 +36,28 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
         //Metodos para guardar perros y gatos.
         public void SaveDog(Dog newDog)
         {
-            Dogs.Add(newDog);
-            Console.WriteLine($"Se agrega un nuevo perro a nuestra veterinaria, Bienvenido :D ");
+            if (Dogs.Find(item => (item.AnimalName().Equals(newDog.AnimalName()) && item.AnimalId() == newDog.AnimalId())) == null)
+            {
+                Dogs.Add(newDog);
+                Console.WriteLine($"Se agrega un nuevo perro a nuestra veterinaria, Bienvenido :D ");
+            }
+            else
+            {
+                Console.WriteLine($"Lo sentimos, pero en nuestra veterinaria ya hay un perro que tiene el id: {newDog.AnimalId()}");
+            }
         }
 
         public void SaveCat(Cat newCat)
         {
-            Cats.Add(newCat);
-            Console.WriteLine($"Se agrega un nuevo gato a nuestra veterinaria, Bienvenido :D ");
+            if (Cats.Find(item => (item.AnimalName().Equals(newCat.AnimalName()) && item.AnimalId() == newCat.AnimalId())) == null)
+            {
+                Cats.Add(newCat);
+                Console.WriteLine($"Se agrega un nuevo gato a nuestra veterinaria, Bienvenido :D ");
+            }
+            else
+            {
+                Console.WriteLine($"Lo sentimos, pero en nuestra veterinaria ya hay un gato que tiene el id: {newCat.AnimalId()}");
+            }
         }
 
         //Metodos para actualizar perros y gatos.
@@ -275,12 +289,12 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
         //Metodos para Mostar perros y gatos.
         public void ShowAllPatients()
         {
-            Console.WriteLine("Perros ingresados actualmente en la veterinaria:");
+            Console.WriteLine("\nPerros ingresados actualmente en la veterinaria:");
             foreach (Dog itemDog in Dogs)
             {
                 itemDog.ShowInformation();
             }
-            Console.WriteLine("Gatos ingresados actualmente en la veterinaria:");
+            Console.WriteLine("\nGatos ingresados actualmente en la veterinaria:");
             foreach (Cat itemCat in Cats)
             {
                 itemCat.ShowInformation();
