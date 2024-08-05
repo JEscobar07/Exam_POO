@@ -17,7 +17,7 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
         public string CoatType;
 
         //Constructor
-        public Dog(bool _breedingStatus, string _temperament, string _microchipNumber, string _barkVolume, string _coatType)
+        public Dog(bool _breedingStatus, string _temperament, string _microchipNumber, string _barkVolume, string _coatType):base()
         {
             BreedingStatus = _breedingStatus;
             Temperament = _temperament;
