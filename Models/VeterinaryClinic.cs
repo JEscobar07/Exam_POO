@@ -18,7 +18,10 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
         //Constructor vacio
         public VeterinaryClinic()
         {
-
+            Name = "";
+            Address = "";
+            Dogs = new List<Dog>();
+            Cats = new List<Cat>();
         }
 
         //Constructor con parametros

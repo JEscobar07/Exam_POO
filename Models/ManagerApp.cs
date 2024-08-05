@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace PruebaC_sharp_JonathanEscobarMolina.Models
@@ -35,6 +36,16 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
             int month = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Ingresa el dia de nacimiento:");
             int day = Convert.ToInt32(Console.ReadLine());
+            while (new DateOnly(year, month, day) > DateOnly.FromDateTime(DateTime.Now))
+            {
+                Console.WriteLine("Tu fecha es mayor a la fecha actual, porfavor ingresa una fecha vigente\n");
+                Console.WriteLine("Ingresa el año de nacimiento:");
+                year = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Ingresa el mes de nacimiento:");
+                month = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Ingresa el dia de nacimiento:");
+                day = Convert.ToInt32(Console.ReadLine());
+            }
             DateOnly animalBirthdate = new DateOnly(year, month, day);
 
             ShowSeparator();
@@ -186,6 +197,16 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
             int month = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Ingresa el dia de nacimiento:");
             int day = Convert.ToInt32(Console.ReadLine());
+            while (new DateOnly(year, month, day) > DateOnly.FromDateTime(DateTime.Now))
+            {
+                Console.WriteLine("Tu fecha es mayor a la fecha actual, porfavor ingresa una fecha vigente\n");
+                Console.WriteLine("Ingresa el año de nacimiento:");
+                year = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Ingresa el mes de nacimiento:");
+                month = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Ingresa el dia de nacimiento:");
+                day = Convert.ToInt32(Console.ReadLine());
+            }
             DateOnly animalBirthdate = new DateOnly(year, month, day);
 
             ShowSeparator();
@@ -213,7 +234,7 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
             Console.WriteLine($"Dato #6");
             ShowSeparator();
 
-            Console.WriteLine("Cual es el estado de castraccion del gato?, Eligir una opcion\n1. Castrado\n 2. NO castrado");
+            Console.WriteLine("Cual es el estado de castraccion del gato?, Eligir una opcion\n1.Castrado\n 2.NO castrado");
             int option = Convert.ToInt32(Console.ReadLine());
             bool catBreendingStatus = false;
             if (option == 1)

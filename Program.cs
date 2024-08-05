@@ -38,7 +38,10 @@ while (op != 0)
                 break;
             case 1:
                 MessageForMenu(0);
-                myFirstClinic.SaveDog(new Dog(3, "Mary Poppins", new DateOnly(2023, 08, 07), "Stray", "brown", 15, true, "spoiled", "13158", "low", "Pelo corto"));
+
+                //Dato Quemado para ensayar rapido
+                //myFirstClinic.SaveDog(new Dog(3, "Mary Poppins", new DateOnly(2023, 08, 07), "Stray", "brown", 15, true, "spoiled", "13158", "low", "Pelo corto"));
+                
                     try
                     {
                         myFirstClinic.SaveDog(ManagerApp.CreateDog());
@@ -51,8 +54,19 @@ while (op != 0)
                 break;
             case 2:
                 MessageForMenu(0);
-                myFirstClinic.SaveCat(new Cat(1, "Spok", new DateOnly(2010, 07, 04), "Persian", "black & white", 07, true, "sin pelo"));
-                myFirstClinic.SaveCat(ManagerApp.CreateCat());
+                
+                //Dato Quemado para ensayar rapido
+                //myFirstClinic.SaveCat(new Cat(1, "Spok", new DateOnly(2010, 07, 04), "Persian", "black & white", 07, true, "sin pelo"));
+
+                try
+                {
+                    myFirstClinic.SaveCat(ManagerApp.CreateCat());
+                }
+                catch (System.Exception)
+                {
+                    Console.WriteLine("Error con el dato ingresado por favor vuelve a digitar el formulario");
+                }
+  
                 MessageForMenu(1);
                 break;
             case 3:
