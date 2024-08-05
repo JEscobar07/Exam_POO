@@ -28,6 +28,13 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
 
         //Metodos
 
+        public override void ShowInformation()
+        {
+            base.ShowInformation();
+            Console.WriteLine($"Estado de Castraccion: {BreedingStatus}\nTemperamento: {Temperament}\nNumero de microchip: {MicrochipNumber}\nVolumen de ladrido: {BarkVolume}\nTipo de corte: {CoatType}");
+
+        }
+
         public void CastrateAnimal()
         {
             if (BreedingStatus == true)
@@ -68,7 +75,5 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
                 Console.WriteLine("Se ha realizado la peluqueria con exito.");
             }
         }
-
-
     }
 }
