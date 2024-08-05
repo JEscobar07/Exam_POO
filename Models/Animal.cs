@@ -28,19 +28,19 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
         }
 
         //Metodos
-        public void ShowInformation()
+        public virtual void ShowInformation()
         {
-
+            Console.WriteLine($"Id: {Id}\nNombre: {Name}\nFecha de cumpleaños: {Birthdate}\nRaza: {Breed}\nColor: {Color}\nPeso (Kilogramos): {WeightInKg}");
         }
 
-        protected void BasicReview()
+        protected virtual void BasicReview()
         {
-
+            Console.WriteLine($"Id: {Id}\nNombre: {Name}\nFecha de cumpleaños: {Birthdate}\nRaza: {Breed}");
         }
 
         protected int CalculateAgeInMonths()
         {
-            return 0;
+            return DateOnly.FromDateTime(DateTime.Now).Month - Birthdate.Month;
         }
     }
 }
