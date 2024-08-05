@@ -39,12 +39,12 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
         {
             if (BreedingStatus == true)
             {
-                BreedingStatus = true;
-                Console.WriteLine("La castración del animal ha sido realizada con exito.");
+                BreedingStatus = false;
+                Console.WriteLine("\nLa castración del animal ha sido realizada con exito.");
             }
             else
             {
-                Console.WriteLine("Lo sentimos, pero el animal ya se encuentra castrado.");
+                Console.WriteLine("\nLo sentimos, pero el animal ya se encuentra castrado.");
             }
         }
 

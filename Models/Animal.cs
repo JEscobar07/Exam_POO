@@ -30,7 +30,7 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
         //Metodos
         public virtual void ShowInformation()
         {
-            Console.WriteLine($"Id: {Id}\nNombre: {Name}\nFecha de cumpleaños: {Birthdate}\nRaza: {Breed}\nColor: {Color}\nPeso (Kilogramos): {WeightInKg}");
+            Console.WriteLine($"Id: {Id}\nNombre: {Name}\nFecha de cumpleaños: {Birthdate}\nEdad en meses: {CalculateAgeInMonths()}\nRaza: {Breed}\nColor: {Color}\nPeso (Kilogramos): {WeightInKg}");
         }
 
         protected virtual void BasicReview()

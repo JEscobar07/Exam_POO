@@ -79,11 +79,26 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
                     int month = Convert.ToInt32(Console.ReadLine());
                     Console.WriteLine("Ingresa el dia de nacimiento:");
                     int day = Convert.ToInt32(Console.ReadLine());
-                    dog.AnimalBirthdate(new DateOnly(year, month, day));
+                    if (new DateOnly(year, month, day) <= DateOnly.FromDateTime(DateTime.Now))
+                    {
+                        dog.AnimalBirthdate(new DateOnly(year, month, day));
+                    }
+                    else
+                    {
+                        Console.WriteLine("Lo sentimos, pero la fecha de nacimiento no puede ser mayor que la fecha actual");
+                    }
                     break;
                 case 3:
                     Console.Write($"Ingresa la raza del perro\n------>");
-                    dog.AnimalBreed(Console.ReadLine());
+                    if (int.TryParse(Console.ReadLine(), out var var) == true)
+                    {
+                        Console.WriteLine("Los sentimos pero este campo no puede contener numeros");
+                    }
+                    else
+                    {
+                        dog.AnimalBreed(Console.ReadLine());
+                        
+                    }
                     break;
                 case 4:
                     Console.Write($"Ingresa el color del perro\n------>");
@@ -269,7 +284,7 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
             }
             else
             {
-                Console.WriteLine($"El perro con el id {id} NO se encuentra en nuestra veterinaria.");
+                Console.WriteLine($"\nEl perro con el id {id} NO se encuentra en nuestra veterinaria.");
             }
         }
         public void DeleteCat(int id)
@@ -282,42 +297,75 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
             }
             else
             {
-                Console.WriteLine($"El gato con el id {id} NO se encuentra en nuestra veterinaria.");
+                Console.WriteLine($"\nEl gato con el id {id} NO se encuentra en nuestra veterinaria.");
             }
         }
 
         //Metodos para Mostar perros y gatos.
         public void ShowAllPatients()
         {
-            Console.WriteLine("\nPerros ingresados actualmente en la veterinaria:");
-            foreach (Dog itemDog in Dogs)
+
+            if (Dogs.Count != 0)
             {
-                itemDog.ShowInformation();
+                Console.WriteLine("\nPerros ingresados actualmente en la veterinaria:\n");
+                foreach (Dog itemDog in Dogs)
+                {
+                    itemDog.ShowInformation();
+                }
             }
-            Console.WriteLine("\nGatos ingresados actualmente en la veterinaria:");
-            foreach (Cat itemCat in Cats)
+            else
             {
-                itemCat.ShowInformation();
+                Console.WriteLine("\nActualmente NO hay perros registrados en nuestra veterinaria. :( ");
             }
+
+            if (Cats.Count != 0)
+            {
+                Console.WriteLine("\nGatos ingresados actualmente en la veterinaria:\n");
+                foreach (Cat itemCat in Cats)
+                {
+                    itemCat.ShowInformation();
+                }
+            }
+            else
+            {
+                Console.WriteLine("\nActualmente NO hay gatos registrados en nuestra veterinaria. :( ");
+            }
+
         }
 
         public void ShowAnimals(string type)
         {
             if (type.Equals("Perro", StringComparison.OrdinalIgnoreCase))
             {
-                Console.WriteLine("Perros ingresados actualmente en la veterinaria:");
-                foreach (Dog itemDog in Dogs)
+                if (Dogs.Count != 0)
                 {
-                    itemDog.ShowInformation();
+                    Console.WriteLine("\nPerros ingresados actualmente en la veterinaria:\n");
+                    foreach (Dog itemDog in Dogs)
+                    {
+                        itemDog.ShowInformation();
+                    }
                 }
+                else
+                {
+                    Console.WriteLine("\nActualmente NO hay perros registrados en nuestra veterinaria. :( ");
+                }
+
             }
             else if (type.Equals("Gato", StringComparison.OrdinalIgnoreCase))
             {
-                Console.WriteLine("Gatos ingresados actualmente en la veterinaria:");
-                foreach (Cat itemCat in Cats)
+                if (Cats.Count != 0)
                 {
-                    itemCat.ShowInformation();
+                    Console.WriteLine("Gatos ingresados actualmente en la veterinaria:\n");
+                    foreach (Cat itemCat in Cats)
+                    {
+                        itemCat.ShowInformation();
+                    }
                 }
+                else
+                {
+                    Console.WriteLine("\nActualmente NO hay gatos registrados en nuestra veterinaria. :( ");
+                }
+
             }
             else
             {
@@ -332,17 +380,19 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
             Cat catFound = Cats.Find(item => item.AnimalName().Equals(name, StringComparison.OrdinalIgnoreCase));
             if (dogFound != null)
             {
+                Console.WriteLine("\n");
                 dogFound.ShowInformation();
                 flag = false;
             }
             if (catFound != null)
             {
+                Console.WriteLine("\n");
                 catFound.ShowInformation();
                 flag = false;
             }
             if (flag == true)
             {
-                Console.WriteLine($"El animal con el nombre {name} NO se encuentra en nuestra veterinaria.");
+                Console.WriteLine($"\nEl animal con el nombre {name} NO se encuentra en nuestra veterinaria.");
             }
         }
 
