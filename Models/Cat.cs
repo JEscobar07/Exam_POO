@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace PruebaC_sharp_JonathanEscobarMolina.Models
 {
-    public class Cat:Animal
+    public class Cat : Animal
     {
         //Atributos
 
@@ -13,7 +13,7 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
         public string FurLength;
 
         //Constructor
-        public Cat(bool _breedingStatus, string _furLength):base()
+        public Cat(int _id, string _name, DateOnly _birthdate, string _breed, string _color, double _weightInKg, bool _breedingStatus, string _furLength) : base(_id, _name, _birthdate, _breed, _color, _weightInKg)
         {
             BreedingStatus = _breedingStatus;
             FurLength = _furLength;
@@ -21,11 +21,13 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
 
         //Metodos
 
-        public void CastrateAnimal(){
+        public void CastrateAnimal()
+        {
 
         }
 
-        public void Hairdress(){
+        public void Hairdress()
+        {
 
         }
     }
