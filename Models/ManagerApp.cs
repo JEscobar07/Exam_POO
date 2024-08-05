@@ -17,13 +17,19 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
         // }
 
         public static void ShowHeader(){
-
+            Console.WriteLine(@$"
+#############################################################################################
+                                BIENVENIDO AL CENTRO VETERINARIO
+#############################################################################################");
         }
         public static void ShowFooter(){
-
+            Console.WriteLine(@$"
+##############################################################################################
+                                CODER: JONATHAN ESCOBAR MOLINA
+##############################################################################################");
         }
         public static void ShowSeparator(){
-
+            Console.WriteLine("---------------------------------------------------------------------------------------------");
         }
     }
 }
