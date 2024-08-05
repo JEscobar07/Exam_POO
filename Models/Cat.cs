@@ -49,7 +49,7 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
-                    case 1: 
+                    case 1:
                         FurLength = "Sin pelo";
                         break;
                     case 2:
@@ -67,6 +67,14 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
                 }
                 Console.WriteLine("Se ha realizado la peluqueria con exito.");
             }
+        }
+        public void CatBreendingStatus(bool breedingStatus)
+        {
+            BreedingStatus = breedingStatus;
+        }
+        public void CatFurLength(string furLength)
+        {
+            FurLength = furLength;
         }
     }
 }

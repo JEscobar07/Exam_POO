@@ -56,7 +56,7 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
-                    case 1: 
+                    case 1:
                         CoatType = "Sin pelo";
                         break;
                     case 2:
@@ -74,6 +74,29 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
                 }
                 Console.WriteLine("Se ha realizado la peluqueria con exito.");
             }
+        }
+        public void DogBreendingStatus(bool breending)
+        {
+            BreedingStatus = breending;
+        }
+
+        public void DogTemperament(string temperament)
+        {
+            Temperament = temperament;
+        }
+
+        public void DogMicrochipNumber(string microchipNumber)
+        {
+            MicrochipNumber = microchipNumber;
+        }
+
+        public void DogBarkVolume(string barkVolume)
+        {
+            BarkVolume = barkVolume;
+        }
+        public void DogCoatType(string coatType)
+        {
+            CoatType = coatType;
         }
     }
 }

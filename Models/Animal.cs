@@ -42,6 +42,38 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
         {
             return DateOnly.FromDateTime(DateTime.Now).Month - Birthdate.Month;
         }
-        
+
+        public int AnimalId()
+        {
+            return Id;
+        }
+
+        public string AnimalName()
+        {
+            return Name;
+        }
+        public void AnimalName(string name)
+        {
+            Name = name;
+        }
+
+        public void AnimalBirthdate(DateOnly birthdate)
+        {
+            Birthdate = birthdate;
+        }
+
+        public void AnimalBreed(string breed){
+            Breed = breed;
+        }
+
+        public void AnimalColor(string color){
+            Color = color;
+        }
+
+        public void AnimalWeightInKg(double weight){
+            WeightInKg = weight;
+        }
+
+
     }
 }
