@@ -21,14 +21,52 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
 
         //Metodos
 
+        public override void ShowInformation()
+        {
+            base.ShowInformation();
+            Console.WriteLine($"Estado de Castraccion: {BreedingStatus}\nTipo de corte: {FurLength}");
+
+        }
+
         public void CastrateAnimal()
         {
-
+            if (BreedingStatus == true)
+            {
+                BreedingStatus = true;
+                Console.WriteLine("La castración del animal ha sido realizada con exito.");
+            }
+            else
+            {
+                Console.WriteLine("Lo sentimos, pero el animal ya se encuentra castrado.");
+            }
         }
 
         public void Hairdress()
         {
-
+            if (FurLength != "Pelo corto")
+            {
+                Console.WriteLine("Escribe el numero del estilo que deseas realizarle a tu gato: \n1.Sin pelo\n2.Pelo corto\n3.Pelo Mediano\n4.Pelo largo");
+                int option = Convert.ToInt32(Console.ReadLine());
+                switch (option)
+                {
+                    case 1: 
+                        FurLength = "Sin pelo";
+                        break;
+                    case 2:
+                        FurLength = "Pelo corto";
+                        break;
+                    case 3:
+                        FurLength = "Pelo mediano";
+                        break;
+                    case 4:
+                        FurLength = "Pelo largo";
+                        break;
+                    default:
+                        Console.WriteLine("Error, elige una opcion disponible");
+                        break;
+                }
+                Console.WriteLine("Se ha realizado la peluqueria con exito.");
+            }
         }
     }
 }
