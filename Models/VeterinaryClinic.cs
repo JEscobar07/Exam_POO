@@ -195,7 +195,6 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
             Console.WriteLine($"El perro {dog.AnimalName()} ha sido ACTUALIZADO con exito.");
         }
 
-
         public void UpdateCat(Cat cat)
         {
             int option = 0;
@@ -311,6 +310,7 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
                 foreach (Dog itemDog in Dogs)
                 {
                     itemDog.ShowInformation();
+                    Console.WriteLine("\n");
                 }
             }
             else

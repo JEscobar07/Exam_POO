@@ -39,13 +39,20 @@ while (op != 0)
             case 1:
                 MessageForMenu(0);
                 myFirstClinic.SaveDog(new Dog(3, "Mary Poppins", new DateOnly(2023, 08, 07), "Stray", "brown", 15, true, "spoiled", "13158", "low", "Pelo corto"));
-                // myFirstClinic.SaveDog(ManagerApp.CreateDog());
+                    try
+                    {
+                        myFirstClinic.SaveDog(ManagerApp.CreateDog());
+                    }
+                    catch (System.Exception)
+                    {
+                        Console.WriteLine("Error con el dato ingresado por favor vuelve a digitar el formulario");
+                    }
                 MessageForMenu(1);
                 break;
             case 2:
                 MessageForMenu(0);
-                myFirstClinic.SaveCat(new Cat(1, "Spok", new DateOnly(2010, 07, 04), "Persian", "black & white", 07, true, "Pelo largo"));
-                // myFirstClinic.SaveCat(ManagerApp.CreateCat());
+                myFirstClinic.SaveCat(new Cat(1, "Spok", new DateOnly(2010, 07, 04), "Persian", "black & white", 07, true, "sin pelo"));
+                myFirstClinic.SaveCat(ManagerApp.CreateCat());
                 MessageForMenu(1);
                 break;
             case 3:
@@ -128,7 +135,7 @@ while (op != 0)
                 option = Convert.ToInt32(Console.ReadLine());
                 if (option == 1)
                 {
-                    Console.WriteLine("\nIngresa el Id del perro que deseas eliminar");
+                    Console.WriteLine("\nIngresa el Id del perro que deseas castrar");
                     id = Convert.ToInt32(Console.ReadLine());
                     dogFounded = myFirstClinic.Dogs.FirstOrDefault(item => item.AnimalId() == id);
                     if (dogFounded != null)
@@ -142,7 +149,7 @@ while (op != 0)
                 }
                 else if (option == 2)
                 {
-                    Console.WriteLine("\nIngresa el Id del gato que deseas eliminar");
+                    Console.WriteLine("\nIngresa el Id del gato que deseas castrar");
                     id = Convert.ToInt32(Console.ReadLine());
                     catFounded = myFirstClinic.Cats.FirstOrDefault(item => item.AnimalId() == id);
                     if (catFounded != null)
@@ -161,7 +168,43 @@ while (op != 0)
                 MessageForMenu(1);
                 break;
             case 11:
-
+                MessageForMenu(0);
+                Console.WriteLine("Ingresa elija el animal al cual quiere peluquear:\n\n1.Perro\n2.Gato");
+                option = Convert.ToInt32(Console.ReadLine());
+                if (option == 1)
+                {
+                    Console.WriteLine("\nIngresa el Id del perro que deseas peluquear");
+                    id = Convert.ToInt32(Console.ReadLine());
+                    dogFounded = myFirstClinic.Dogs.FirstOrDefault(item => item.AnimalId() == id);
+                    if (dogFounded != null)
+                    {
+                        dogFounded.Hairdress();
+                    }
+                    else
+                    {
+                        Console.WriteLine($"\nLo sentimos pero no hay ningun perro con el id {id}");
+                    }
+                }
+                else if (option == 2)
+                {
+                    Console.WriteLine("\nIngresa el Id del gato que deseas peluquear");
+                    id = Convert.ToInt32(Console.ReadLine());
+                    catFounded = myFirstClinic.Cats.FirstOrDefault(item => item.AnimalId() == id);
+                    if (catFounded != null)
+                    {
+                        catFounded.Hairdress();
+                    }
+                    else
+                    {
+                        Console.WriteLine($"\nLo sentimos pero no hay ningun gato con el id {id}");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Lo sentimos, pero tienes que ingresar una opcion valida");
+                }
+                MessageForMenu(1);
+                break;
             default:
                 Console.Write("Error, ingrese una opcion valida dentro del menu de opciones. ");
                 MessageForMenu(1);

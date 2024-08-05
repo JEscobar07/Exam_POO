@@ -50,7 +50,7 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
 
         public void Hairdress()
         {
-            if (CoatType != "Pelo corto")
+            if (CoatType.ToLower() != "Pelo corto".ToLower())
             {
                 Console.WriteLine("Escribe el numero del estilo que deseas realizarle a tu perro: \n1.Sin pelo\n2.Pelo corto\n3.Pelo Mediano\n4.Pelo largo");
                 int option = Convert.ToInt32(Console.ReadLine());
@@ -73,6 +73,8 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
                         break;
                 }
                 Console.WriteLine("Se ha realizado la peluqueria con exito.");
+            }else{
+                Console.WriteLine($"Lo sentimos pero para peluquear a tu mascota ella No puede tener el tipo de pelaje : {CoatType}");
             }
         }
         public void DogBreendingStatus(bool breending)

@@ -12,21 +12,21 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
         public static Dog CreateDog()
         {
             ShowSeparator();
-            Console.Write($"Dato #0");
+            Console.WriteLine($"Dato #0");
             ShowSeparator();
 
             Console.Write($"Ingresa el ID del nuevo gato\n------>");
             int animalId = Convert.ToInt32(Console.ReadLine());
 
             ShowSeparator();
-            Console.Write($"Dato #1");
+            Console.WriteLine($"Dato #1");
             ShowSeparator();
 
             Console.Write($"Ingresa el nuevo nombre del perro\n------>");
             string animalName = Console.ReadLine();
 
             ShowSeparator();
-            Console.Write($"Dato #2");
+            Console.WriteLine($"Dato #2");
             ShowSeparator();
 
             Console.WriteLine("Ingresa el año de nacimiento:");
@@ -38,28 +38,28 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
             DateOnly animalBirthdate = new DateOnly(year, month, day);
 
             ShowSeparator();
-            Console.Write($"Dato #3");
+            Console.WriteLine($"Dato #3");
             ShowSeparator();
 
             Console.Write($"Ingresa la raza del perro\n------>");
             string animalBreed = Console.ReadLine();
 
             ShowSeparator();
-            Console.Write($"Dato #4");
+            Console.WriteLine($"Dato #4");
             ShowSeparator();
 
             Console.Write($"Ingresa el color del perro\n------>");
             string animalColor = Console.ReadLine();
 
             ShowSeparator();
-            Console.Write($"Dato #5");
+            Console.WriteLine($"Dato #5");
             ShowSeparator();
 
             Console.Write($"Ingresa el peso del perro en kilo gramos\n------>");
             double animalWeightInKg = Convert.ToDouble(Console.ReadLine());
 
             ShowSeparator();
-            Console.Write($"Dato #6");
+            Console.WriteLine($"Dato #6");
             ShowSeparator();
 
             Console.WriteLine("Cual es el estado de castraccion del perro?, Eligir una opcion\n1. Castrado\n 2. NO castrado");
@@ -79,7 +79,7 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
             }
 
             ShowSeparator();
-            Console.Write($"Dato #7");
+            Console.WriteLine($"Dato #7");
             ShowSeparator();
 
             Console.WriteLine("Cual es el temperamento del perro?, Eligir una opcion\n1. Timido\n 2. Normal\n3. Agresivo");
@@ -102,14 +102,14 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
             }
 
             ShowSeparator();
-            Console.Write($"Dato #8");
+            Console.WriteLine($"Dato #8");
             ShowSeparator();
 
             Console.Write($"Ingresa el numero de microchip del perro \n------>");
             string dogMicrochipNumber = Console.ReadLine();
 
             ShowSeparator();
-            Console.Write($"Dato #9");
+            Console.WriteLine($"Dato #9");
             ShowSeparator();
 
             Console.WriteLine("Cual es el nivel de ladrido del perro?, Eligir una opcion\n1. Alto\n 2. Medio\n3. Bajo");
@@ -132,7 +132,7 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
             }
 
             ShowSeparator();
-            Console.Write($"Dato #10");
+            Console.WriteLine($"Dato #10");
             ShowSeparator();
 
             Console.WriteLine("Escribe el numero del estilo que tiene tu perro: \n1.Sin pelo\n2.Pelo corto\n3.Pelo mediano\n4.Pelo largo");
@@ -163,21 +163,21 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
         public static Cat CreateCat()
         {
             ShowSeparator();
-            Console.Write($"Dato #0");
+            Console.WriteLine($"Dato #0");
             ShowSeparator();
 
             Console.Write($"Ingresa el ID del nuevo gato\n------>");
             int animalId = Convert.ToInt32(Console.ReadLine());
 
             ShowSeparator();
-            Console.Write($"Dato #1");
+            Console.WriteLine($"Dato #1");
             ShowSeparator();
 
             Console.Write($"Ingresa el nuevo nombre del gato\n------>");
             string animalName = Console.ReadLine();
 
             ShowSeparator();
-            Console.Write($"Dato #2");
+            Console.WriteLine($"Dato #2");
             ShowSeparator();
 
             Console.WriteLine("Ingresa el año de nacimiento:");
@@ -189,28 +189,28 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
             DateOnly animalBirthdate = new DateOnly(year, month, day);
 
             ShowSeparator();
-            Console.Write($"Dato #3");
+            Console.WriteLine($"Dato #3");
             ShowSeparator();
 
             Console.Write($"Ingresa la raza del gato\n------>");
             string animalBreed = Console.ReadLine();
 
             ShowSeparator();
-            Console.Write($"Dato #4");
+            Console.WriteLine($"Dato #4");
             ShowSeparator();
 
             Console.Write($"Ingresa el color del gato\n------>");
             string animalColor = Console.ReadLine();
 
             ShowSeparator();
-            Console.Write($"Dato #5");
+            Console.WriteLine($"Dato #5");
             ShowSeparator();
 
             Console.Write($"Ingresa el peso del gato en kilo gramos\n------>");
             double animalWeightInKg = Convert.ToDouble(Console.ReadLine());
 
             ShowSeparator();
-            Console.Write($"Dato #6");
+            Console.WriteLine($"Dato #6");
             ShowSeparator();
 
             Console.WriteLine("Cual es el estado de castraccion del gato?, Eligir una opcion\n1. Castrado\n 2. NO castrado");
@@ -231,7 +231,7 @@ namespace PruebaC_sharp_JonathanEscobarMolina.Models
 
 
             ShowSeparator();
-            Console.Write($"Dato #7");
+            Console.WriteLine($"Dato #7");
             ShowSeparator();
 
             Console.WriteLine("Escribe el numero del estilo que tiene tu gato: \n1.Sin pelo\n2.Pelo corto\n3.Pelo mediano\n4.Pelo largo");
