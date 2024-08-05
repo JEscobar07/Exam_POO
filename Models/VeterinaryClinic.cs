@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace PruebaC_sharp_JonathanEscobarMolina.Models
 {
-    //Clase padre publica 
+    //Clase principal publica 
     public class VeterinaryClinic
     {
         //Atributos
