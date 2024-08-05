@@ -1,7 +1,10 @@
 ﻿using PruebaC_sharp_JonathanEscobarMolina.Models;
 
+VeterinaryClinic myFirstClinic = new VeterinaryClinic("Veterinaria Villa paula", "calle 54 # 50 - 74");
+
 while (true)
 {
+    
     try
     {
         Console.Clear();
@@ -28,9 +31,13 @@ while (true)
                 Console.WriteLine("¡GRACIAS POR USAR NUESTRO SISTEMA! HASTA LUEGO...");
                 return;
             case 1:
+                myFirstClinic.SaveDog(new Dog(3, "Mary Poppins", new DateOnly (2023,08,07), "Stray", "brown", 15, false, "spoiled", "13158", "low", "short"));
+                // myFirstClinic.SaveDog(ManagerApp.CreateDog());
                 Console.ReadKey();
                 break;
             case 2:
+                myFirstClinic.SaveCat(new Cat(1, "Spok", new DateOnly (2010,07,04), "Persian", "black & white", 07, false, "long"));
+                // myFirstClinic.SaveCat(ManagerApp.CreateCat());
                 Console.ReadKey();
                 break;
             case 3:
