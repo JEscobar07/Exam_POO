@@ -1,8 +1,13 @@
 ﻿using PruebaC_sharp_JonathanEscobarMolina.Models;
 
+
+//Inicializacion de objeto veterinaria  para poder ejecutar el codigo
+
 VeterinaryClinic myFirstClinic = new VeterinaryClinic("Veterinaria Villa paula", "calle 54 # 50 - 74");
 
 int op = -1;
+
+//Bucle para no finalizar el programa
 
 while (op != 0)
 {
@@ -41,7 +46,7 @@ while (op != 0)
 
                 //Dato Quemado para ensayar rapido
                 //myFirstClinic.SaveDog(new Dog(3, "Mary Poppins", new DateOnly(2023, 08, 07), "Stray", "brown", 15, true, "spoiled", "13158", "low", "Pelo corto"));
-                
+
                     try
                     {
                         myFirstClinic.SaveDog(ManagerApp.CreateDog());
